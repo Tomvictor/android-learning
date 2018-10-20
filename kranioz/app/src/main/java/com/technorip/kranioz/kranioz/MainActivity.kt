@@ -17,6 +17,20 @@ class MainActivity : AppCompatActivity() {
 
     var disposable: Disposable? = null
 
+    private val redditApiSer by lazy {
+        RedditApiService.create()
+    }
+
+
+    private fun redditSearch() {
+        disposable = redditApiSer.getTop("", "10")
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+                { result -> message.text = "${result}" }
+            )
+    }
+
     private fun beginSearch(searchString: String) {
         disposable = wikiApiServe.hitCountCheck("query", "json", "search", searchString)
             .subscribeOn(Schedulers.io())
@@ -26,16 +40,22 @@ class MainActivity : AppCompatActivity() {
             )
     }
 
+    override fun onPause() {
+        super.onPause()
+        disposable?.dispose()
+    }
+
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
 
-                message.setText(R.string.title_home)
+//                message.setText(R.string.title_home)
                 beginSearch(searchString="tom")
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                message.setText(R.string.trips)
+//                message.setText(R.string.trips)
+                redditSearch()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
