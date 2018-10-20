@@ -35,10 +35,13 @@ class MainActivity : AppCompatActivity() {
                     mydata = result.data.children[0]
 //                    message.text = "${mydata.data.title}"
 //                  implementing for loop
+                    var totalString: String = ""
                     for (ivan in result.data.children){
-                        message.text = "${ivan.data.title}"
-                        message.text = "\r\n----"
+                        totalString += ivan.data.title
+                        totalString += "\r\n"
+                        totalString += "\r\n"
                     }
+                    message.text = totalString
                 }
 
             )
