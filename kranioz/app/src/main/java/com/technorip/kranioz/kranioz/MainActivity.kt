@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { result -> txt_search_result.text = "${result.query.searchinfo.totalhits} result found" },
-                { error -> Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show() }
+                { result -> message.text = "${result.query.searchinfo.totalhits}" }
             )
     }
 
@@ -32,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_home -> {
 
                 message.setText(R.string.title_home)
+                beginSearch(searchString="tom")
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
