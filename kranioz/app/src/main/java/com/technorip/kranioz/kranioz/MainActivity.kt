@@ -29,7 +29,18 @@ class MainActivity : AppCompatActivity() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { result -> message.text = "${result.data.after}" }
+                { result ->
+                    var mydata: RedditChildrenResponse
+                    var chdata: RedditNewsDataResponse
+                    mydata = result.data.children[0]
+//                    message.text = "${mydata.data.title}"
+//                  implementing for loop
+                    for (ivan in result.data.children){
+                        message.text = "${ivan.data.title}"
+                        message.text = "\r\n----"
+                    }
+                }
+
             )
     }
 
@@ -52,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_home -> {
 
 //                message.setText(R.string.title_home)
-                beginSearch(searchString="tom")
+                beginSearch(searchString = "tom")
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {

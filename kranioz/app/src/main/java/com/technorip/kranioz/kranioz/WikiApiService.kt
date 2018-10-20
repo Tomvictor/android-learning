@@ -23,7 +23,7 @@ interface  RedditApiService {
             val retrofit = Retrofit.Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://www.reddit.com/top.json")
+                .baseUrl("https://www.reddit.com/")
                 .build()
 
             return retrofit.create(RedditApiService::class.java)
