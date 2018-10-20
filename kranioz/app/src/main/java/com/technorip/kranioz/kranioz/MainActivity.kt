@@ -21,13 +21,15 @@ class MainActivity : AppCompatActivity() {
         RedditApiService.create()
     }
 
+    var disposable2: Disposable? = null
+
 
     private fun redditSearch() {
-        disposable = redditApiSer.getTop("", "10")
+        disposable2 = redditApiSer.getTop("", "10")
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { result -> message.text = "${result}" }
+                { result -> message.text = "${result.data.after}" }
             )
     }
 
