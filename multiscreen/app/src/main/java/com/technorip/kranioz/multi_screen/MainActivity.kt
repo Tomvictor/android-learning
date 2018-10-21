@@ -1,5 +1,6 @@
 package com.technorip.kranioz.multi_screen
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         var count: Int = Integer.parseInt(countString)
         count++
         showCountTextView.text = count.toString()
+    }
+    fun randomMe(view: View){
+        val randomIndent = Intent(this,randon_activity::class.java)
+        startActivity(randomIndent)
+
     }
 }
 

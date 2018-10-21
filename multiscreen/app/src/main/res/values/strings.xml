@@ -4,5 +4,7 @@
     <string name="button1">Toast</string>
     <string name="button2">Count</string>
     <string name="button3">Random</string>
-    <string name="tost_val">Toast Me!</string>
+    <string name="toast_val">Toast Me!</string>
+    <string name="random_heading">Random headding</string>
+
 </resources>
