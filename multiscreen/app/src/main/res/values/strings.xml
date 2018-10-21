@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">multi-screen</string>
-    <string name="hello">Hello world! Tom ></string>
+    <string name="hello">Spotlight</string>
+    <string name="button1">Toast</string>
+    <string name="button2">Count</string>
+    <string name="button3">Random</string>
 </resources>
