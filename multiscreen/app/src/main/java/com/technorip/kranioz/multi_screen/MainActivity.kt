@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun countMe(view: View){
-        var showCountTextView = findViewById(R.id.counter) as TextView
+        val showCountTextView = findViewById(R.id.counter) as TextView
         val countString = showCountTextView.text.toString()
 
         var count: Int = Integer.parseInt(countString)
