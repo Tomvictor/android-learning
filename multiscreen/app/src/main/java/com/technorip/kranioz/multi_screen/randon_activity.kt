@@ -28,7 +28,8 @@ class randon_activity : AppCompatActivity() {
         // Add one because the bound is exclusive
         if (count > 0) {
             // Add one because the bound is exclusive
-            randomInt = random.nextInt(count + 1)
+//            randomInt = random.nextInt(count + 1)
+            randomInt = count + 10
         }
 
         // Display the random number.
