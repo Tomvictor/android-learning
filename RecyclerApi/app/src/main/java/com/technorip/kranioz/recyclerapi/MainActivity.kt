@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initialApiData() {
 //        get the api response and populate the data
-        disposable = redditApiSer.getTop("", "10")
+        disposable = redditApiSer.getTop("", "25")
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
@@ -117,7 +117,6 @@ class MainActivity : AppCompatActivity() {
         val sportsImageResources = resources
             .obtainTypedArray(R.array.sports_images)
 
-
         // Clear the existing data (to avoid duplication).
         mSportsData!!.clear()
 
@@ -129,38 +128,6 @@ class MainActivity : AppCompatActivity() {
                 Sport(i.data.author, i.data.title,
                     sportsImageResources.getResourceId(0, 0)
                 )
-            )
-        }
-
-        // Recycle the typed array.
-        sportsImageResources.recycle()
-
-        // Notify the adapter of the change.
-        mAdapter!!.notifyDataSetChanged()
-    }
-
-    /**
-     * Initialize the sports data from resources.
-     */
-    private fun initializeData() {
-        // Get the resources from the XML file.
-        val sportsList = resources
-            .getStringArray(R.array.sports_titles)
-        val sportsInfo = resources
-            .getStringArray(R.array.sports_info)
-        val sportsImageResources = resources
-            .obtainTypedArray(R.array.sports_images)
-
-        // Clear the existing data (to avoid duplication).
-        mSportsData!!.clear()
-
-        // Create the ArrayList of Sports objects with titles and
-        // information about each sport.
-        for (i in sportsList.indices) {
-            mSportsData!!.add(
-                Sport(sportsList[i], sportsInfo[i],
-                sportsImageResources.getResourceId(i, 0)
-            )
             )
         }
 
