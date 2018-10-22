@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.helper.ItemTouchHelper
 import java.util.*
 
 /***
@@ -38,6 +39,53 @@ class MainActivity : AppCompatActivity() {
 
         // Get the data.
         initializeData()
+
+        // Helper class for creating swipe to dismiss and drag and drop
+        // functionality.
+        val helper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+                ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT or
+                        ItemTouchHelper.DOWN or ItemTouchHelper.UP,
+                ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
+            /**
+             * Defines the drag and drop functionality.
+             *
+             * @param recyclerView The RecyclerView that contains the list items
+             * @param viewHolder The SportsViewHolder that is being moved
+             * @param target The SportsViewHolder that you are switching the
+             * original one with.
+             * @return true if the item was moved, false otherwise
+             */
+            override fun onMove(recyclerView: RecyclerView,
+                                viewHolder: RecyclerView.ViewHolder,
+                                target: RecyclerView.ViewHolder): Boolean {
+                // Get the from and to positions.
+                val from = viewHolder.adapterPosition
+                val to = target.adapterPosition
+
+                // Swap the items and notify the adapter.
+                Collections.swap(mSportsData!!, from, to)
+                mAdapter!!.notifyItemMoved(from, to)
+                return true
+            }
+
+            /**
+             * Defines the swipe to dismiss functionality.
+             *
+             * @param viewHolder The viewholder being swiped.
+             * @param direction The direction it is swiped in.
+             */
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder,
+                                  direction: Int) {
+                // Remove the item from the dataset.
+                mSportsData!!.removeAt(viewHolder.adapterPosition)
+                // Notify the adapter.
+                mAdapter!!.notifyItemRemoved(viewHolder.adapterPosition)
+            }
+        })
+
+        // Attach the helper to the RecyclerView.
+        helper.attachToRecyclerView(mRecyclerView)
+
     }
 
     /**
@@ -68,5 +116,7 @@ class MainActivity : AppCompatActivity() {
         // Notify the adapter of the change.
         mAdapter!!.notifyDataSetChanged()
     }
+
+
 
 }

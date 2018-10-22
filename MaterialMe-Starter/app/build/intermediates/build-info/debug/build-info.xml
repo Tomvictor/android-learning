@@ -5,28 +5,31 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="METHOD_ADDED"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.2.1"
-    timestamp="1540204667651"
+    timestamp="1540206254889"
     token="-2382922271133325329"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="254" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="34" />
+        duration="79" />
     <task
         name="verifier"
-        duration="28" />
+        duration="12" />
 
     <artifact
         location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
@@ -74,12 +77,15 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1540204667651"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1540206254889"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
