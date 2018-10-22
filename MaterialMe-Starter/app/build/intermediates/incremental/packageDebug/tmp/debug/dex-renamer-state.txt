@@ -1,0 +1,4 @@
+#Mon Oct 22 12:50:24 IST 2018
+base.0=/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
