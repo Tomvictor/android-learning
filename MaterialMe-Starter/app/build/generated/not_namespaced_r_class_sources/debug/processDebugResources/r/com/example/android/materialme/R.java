@@ -23,8 +23,9 @@ public final class R {
     public static final int abc_tooltip_exit=0x7f01000b;
   }
   public static final class array {
-    public static final int sports_info=0x7f020000;
-    public static final int sports_titles=0x7f020001;
+    public static final int sports_images=0x7f020000;
+    public static final int sports_info=0x7f020001;
+    public static final int sports_titles=0x7f020002;
   }
   public static final class attr {
     /**
@@ -2524,20 +2525,31 @@ public final class R {
     public static final int abc_textfield_search_default_mtrl_alpha=0x7f070050;
     public static final int abc_textfield_search_material=0x7f070051;
     public static final int abc_vector_test=0x7f070052;
-    public static final int notification_action_background=0x7f070053;
-    public static final int notification_bg=0x7f070054;
-    public static final int notification_bg_low=0x7f070055;
-    public static final int notification_bg_low_normal=0x7f070056;
-    public static final int notification_bg_low_pressed=0x7f070057;
-    public static final int notification_bg_normal=0x7f070058;
-    public static final int notification_bg_normal_pressed=0x7f070059;
-    public static final int notification_icon_background=0x7f07005a;
-    public static final int notification_template_icon_bg=0x7f07005b;
-    public static final int notification_template_icon_low_bg=0x7f07005c;
-    public static final int notification_tile_bg=0x7f07005d;
-    public static final int notify_panel_notification_icon_bg=0x7f07005e;
-    public static final int tooltip_frame_dark=0x7f07005f;
-    public static final int tooltip_frame_light=0x7f070060;
+    public static final int img_badminton=0x7f070053;
+    public static final int img_baseball=0x7f070054;
+    public static final int img_basketball=0x7f070055;
+    public static final int img_bowling=0x7f070056;
+    public static final int img_cycling=0x7f070057;
+    public static final int img_golf=0x7f070058;
+    public static final int img_running=0x7f070059;
+    public static final int img_soccer=0x7f07005a;
+    public static final int img_swimming=0x7f07005b;
+    public static final int img_tabletennis=0x7f07005c;
+    public static final int img_tennis=0x7f07005d;
+    public static final int notification_action_background=0x7f07005e;
+    public static final int notification_bg=0x7f07005f;
+    public static final int notification_bg_low=0x7f070060;
+    public static final int notification_bg_low_normal=0x7f070061;
+    public static final int notification_bg_low_pressed=0x7f070062;
+    public static final int notification_bg_normal=0x7f070063;
+    public static final int notification_bg_normal_pressed=0x7f070064;
+    public static final int notification_icon_background=0x7f070065;
+    public static final int notification_template_icon_bg=0x7f070066;
+    public static final int notification_template_icon_low_bg=0x7f070067;
+    public static final int notification_tile_bg=0x7f070068;
+    public static final int notify_panel_notification_icon_bg=0x7f070069;
+    public static final int tooltip_frame_dark=0x7f07006a;
+    public static final int tooltip_frame_light=0x7f07006b;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -2649,30 +2661,31 @@ public final class R {
     public static final int showTitle=0x7f08006a;
     public static final int spacer=0x7f08006b;
     public static final int split_action_bar=0x7f08006c;
-    public static final int src_atop=0x7f08006d;
-    public static final int src_in=0x7f08006e;
-    public static final int src_over=0x7f08006f;
-    public static final int start=0x7f080070;
-    public static final int subTitle=0x7f080071;
-    public static final int submenuarrow=0x7f080072;
-    public static final int submit_area=0x7f080073;
-    public static final int tabMode=0x7f080074;
-    public static final int tag_transition_group=0x7f080075;
-    public static final int text=0x7f080076;
-    public static final int text2=0x7f080077;
-    public static final int textSpacerNoButtons=0x7f080078;
-    public static final int textSpacerNoTitle=0x7f080079;
-    public static final int time=0x7f08007a;
-    public static final int title=0x7f08007b;
-    public static final int titleDividerNoCustom=0x7f08007c;
-    public static final int title_template=0x7f08007d;
-    public static final int top=0x7f08007e;
-    public static final int topPanel=0x7f08007f;
-    public static final int uniform=0x7f080080;
-    public static final int up=0x7f080081;
-    public static final int useLogo=0x7f080082;
-    public static final int withText=0x7f080083;
-    public static final int wrap_content=0x7f080084;
+    public static final int sportsImage=0x7f08006d;
+    public static final int src_atop=0x7f08006e;
+    public static final int src_in=0x7f08006f;
+    public static final int src_over=0x7f080070;
+    public static final int start=0x7f080071;
+    public static final int subTitle=0x7f080072;
+    public static final int submenuarrow=0x7f080073;
+    public static final int submit_area=0x7f080074;
+    public static final int tabMode=0x7f080075;
+    public static final int tag_transition_group=0x7f080076;
+    public static final int text=0x7f080077;
+    public static final int text2=0x7f080078;
+    public static final int textSpacerNoButtons=0x7f080079;
+    public static final int textSpacerNoTitle=0x7f08007a;
+    public static final int time=0x7f08007b;
+    public static final int title=0x7f08007c;
+    public static final int titleDividerNoCustom=0x7f08007d;
+    public static final int title_template=0x7f08007e;
+    public static final int top=0x7f08007f;
+    public static final int topPanel=0x7f080080;
+    public static final int uniform=0x7f080081;
+    public static final int up=0x7f080082;
+    public static final int useLogo=0x7f080083;
+    public static final int withText=0x7f080084;
+    public static final int wrap_content=0x7f080085;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;

@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+array sports_images
 array sports_info
 array sports_titles
 attr actionBarDivider
@@ -600,6 +601,17 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable img_badminton
+drawable img_baseball
+drawable img_basketball
+drawable img_bowling
+drawable img_cycling
+drawable img_golf
+drawable img_running
+drawable img_soccer
+drawable img_swimming
+drawable img_tabletennis
+drawable img_tennis
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -723,6 +735,7 @@ id showHome
 id showTitle
 id spacer
 id split_action_bar
+id sportsImage
 id src_atop
 id src_in
 id src_over

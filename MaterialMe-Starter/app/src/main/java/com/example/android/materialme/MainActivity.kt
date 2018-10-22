@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
                 .getStringArray(R.array.sports_titles)
         val sportsInfo = resources
                 .getStringArray(R.array.sports_info)
+        val sportsImageResources = resources
+                .obtainTypedArray(R.array.sports_images)
 
         // Clear the existing data (to avoid duplication).
         mSportsData!!.clear()
@@ -56,8 +58,12 @@ class MainActivity : AppCompatActivity() {
         // Create the ArrayList of Sports objects with titles and
         // information about each sport.
         for (i in sportsList.indices) {
-            mSportsData!!.add(Sport(sportsList[i], sportsInfo[i]))
+            mSportsData!!.add(Sport(sportsList[i], sportsInfo[i],
+                    sportsImageResources.getResourceId(i,0)))
         }
+
+        // Recycle the typed array.
+        sportsImageResources.recycle()
 
         // Notify the adapter of the change.
         mAdapter!!.notifyDataSetChanged()

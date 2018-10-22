@@ -6,7 +6,7 @@ INJECTED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/sr
 INJECTED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml:16:1-34:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9d54b98722d148ebc030735a34b2845b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/37d5ebf1f760530e6c576bde1f7e30d2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.1.0] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.0.aar/b9630ed76bb8789358627ff6ebc3bafb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/11a81b7c25e33c8cb7759f62f0392af7/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/6b96ca6bbb1d6fdb71a9ab90aa81d683/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/d049539943e79e64e79e8e45784d098b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0eae4d936a1b28495b5f2d8baa1107ed/AndroidManifest.xml:17:1-22:12
@@ -68,8 +68,8 @@ MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tomvictor/.gradle/c
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9d54b98722d148ebc030735a34b2845b/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/37d5ebf1f760530e6c576bde1f7e30d2/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/37d5ebf1f760530e6c576bde1f7e30d2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.0] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.0.aar/b9630ed76bb8789358627ff6ebc3bafb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.0] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.0.aar/b9630ed76bb8789358627ff6ebc3bafb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/11a81b7c25e33c8cb7759f62f0392af7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/11a81b7c25e33c8cb7759f62f0392af7/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/6b96ca6bbb1d6fdb71a9ab90aa81d683/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/6b96ca6bbb1d6fdb71a9ab90aa81d683/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tomvictor/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/d049539943e79e64e79e8e45784d098b/AndroidManifest.xml:20:5-44
