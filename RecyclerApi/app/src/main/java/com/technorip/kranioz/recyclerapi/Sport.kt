@@ -22,5 +22,5 @@ package com.technorip.kranioz.recyclerapi
 internal class Sport(
         val title: String,
         val info: String,
-        val imageResource: Int
+        val imageResource: String
 )

@@ -125,8 +125,7 @@ class MainActivity : AppCompatActivity() {
 
         for (i in apiRes.data.children){
             mSportsData!!.add(
-                Sport(i.data.author, i.data.title,
-                    sportsImageResources.getResourceId(0, 0)
+                Sport(i.data.author, i.data.title,i.data.thumbnail
                 )
             )
         }
