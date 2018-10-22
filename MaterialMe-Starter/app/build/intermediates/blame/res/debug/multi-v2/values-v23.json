@@ -4,7 +4,7 @@
             "outputFile": "/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.0.aar/b9630ed76bb8789358627ff6ebc3bafb/res/values-v23/values-v23.xml",
+                    "source": "/Users/tomvictor/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/11a81b7c25e33c8cb7759f62f0392af7/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

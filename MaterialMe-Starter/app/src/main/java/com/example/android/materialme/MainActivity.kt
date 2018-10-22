@@ -1,5 +1,3 @@
-
-
 package com.example.android.materialme
 
 import android.os.Bundle
@@ -34,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         mSportsData = ArrayList()
 
         // Initialize the adapter and set it to the RecyclerView.
-        mAdapter = SportsAdapter(this, mSportsData)
+        mAdapter = SportsAdapter(this, mSportsData!!)
         mRecyclerView!!.adapter = mAdapter
 
         // Get the data.
@@ -107,7 +105,7 @@ class MainActivity : AppCompatActivity() {
         // information about each sport.
         for (i in sportsList.indices) {
             mSportsData!!.add(Sport(sportsList[i], sportsInfo[i],
-                    sportsImageResources.getResourceId(i,0)))
+                    sportsImageResources.getResourceId(i, 0)))
         }
 
         // Recycle the typed array.
@@ -116,7 +114,6 @@ class MainActivity : AppCompatActivity() {
         // Notify the adapter of the change.
         mAdapter!!.notifyDataSetChanged()
     }
-
 
 
 }
