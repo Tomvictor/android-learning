@@ -105,7 +105,8 @@ class MainActivity : AppCompatActivity() {
         // information about each sport.
         for (i in sportsList.indices) {
             mSportsData!!.add(Sport(sportsList[i], sportsInfo[i],
-                    sportsImageResources.getResourceId(i, 0)))
+                    sportsImageResources.getResourceId(i, 0)
+            ))
         }
 
         // Recycle the typed array.

@@ -2,14 +2,13 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="27"
-    build-mode="COLD"
+    build-mode="FULL"
     density="xxhdpi"
     format="10"
-    ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
     plugin-version="3.2.1"
-    timestamp="1540214904978"
+    timestamp="1540224496533"
     token="-2382922271133325329"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
@@ -19,10 +18,10 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="38" />
+        duration="49" />
     <task
         name="verifier"
-        duration="5" />
+        duration="43" />
 
     <artifact
         location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -30,62 +29,83 @@
     <artifact
         location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1540213497739"
+        timestamp="1540224496533"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
             location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
-        timestamp="1540214904978"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/tomvictor/github/android-learning/MaterialMe-Starter/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

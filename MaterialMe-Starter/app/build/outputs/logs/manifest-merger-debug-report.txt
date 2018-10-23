@@ -63,10 +63,10 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml:29:17-77
 	android:name
 		ADDED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml:29:27-74
-activity#com.ngamolsky.android.materialme.DetailActivity
-ADDED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml:32:9-93
+activity#com.example.android.materialme.DetailActivity
+ADDED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml:32:9-61
 	android:name
-		ADDED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml:32:19-81
+		ADDED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml:32:19-49
 uses-sdk
 INJECTED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/tomvictor/github/android-learning/MaterialMe-Starter/app/src/main/AndroidManifest.xml

@@ -26,7 +26,6 @@ import android.widget.ImageView
 import android.widget.TextView
 
 import com.bumptech.glide.Glide
-import com.ngamolsky.android.materialme.DetailActivity
 
 import java.util.ArrayList
 

@@ -37,7 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ngamolsky.android.materialme.DetailActivity" />
+        <activity android:name="com.example.android.materialme.DetailActivity" />
     </application>
 
 </manifest>

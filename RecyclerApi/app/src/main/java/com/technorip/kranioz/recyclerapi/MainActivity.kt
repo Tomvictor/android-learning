@@ -113,10 +113,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadData(apiRes: RedditNewsResponse) {
-        // Get the resources from the XML file.
-        val sportsImageResources = resources
-            .obtainTypedArray(R.array.sports_images)
-
         // Clear the existing data (to avoid duplication).
         mSportsData!!.clear()
 
@@ -130,8 +126,6 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        // Recycle the typed array.
-        sportsImageResources.recycle()
 
         // Notify the adapter of the change.
         mAdapter!!.notifyDataSetChanged()
