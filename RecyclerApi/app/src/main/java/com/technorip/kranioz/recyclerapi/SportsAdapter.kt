@@ -18,6 +18,7 @@ package com.example.android.materialme
 
 import android.content.Context
 import android.content.Intent
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -25,8 +26,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.technorip.kranioz.recyclerapi.DetailActivity
 import com.technorip.kranioz.recyclerapi.Sport
+import com.technorip.kranioz.recyclerapi.login_activity
 import java.util.*
 
 /***
@@ -98,7 +99,6 @@ internal class SportsAdapter
         private val mSportsImage: ImageView
 
         init {
-
             // Initialize the views.
             mTitleText = itemView.findViewById(R.id.title)
             mInfoText = itemView.findViewById(R.id.subTitle)
@@ -124,12 +124,16 @@ internal class SportsAdapter
          * @param view View that is clicked.
          */
         override fun onClick(view: View) {
-            val currentSport = mSportsData[adapterPosition]
-            val detailIntent = Intent(mContext, DetailActivity::class.java)
-            detailIntent.putExtra("title", currentSport.title)
-            detailIntent.putExtra("image_resource",
-                currentSport.imageResource)
-            mContext.startActivity(detailIntent)
+//            val currentSport = mSportsData[adapterPosition]
+//            val detailIntent = Intent(mContext, DetailActivity::class.java)
+//            detailIntent.putExtra("title", currentSport.title)
+//            detailIntent.putExtra("image_resource",
+//                currentSport.imageResource)
+//            mContext.startActivity(detailIntent)
+
+            val LoginIntent = Intent(mContext, login_activity::class.java)
+            startActivity(mContext,LoginIntent,null)
+
         }
     }
 }

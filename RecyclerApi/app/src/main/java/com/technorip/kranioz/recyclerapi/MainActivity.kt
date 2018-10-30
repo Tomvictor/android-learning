@@ -1,5 +1,4 @@
 package com.example.android.materialme
-
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -33,8 +32,12 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         // Initialize the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerView)
@@ -98,7 +101,6 @@ class MainActivity : AppCompatActivity() {
 
         // Attach the helper to the RecyclerView.
         helper.attachToRecyclerView(mRecyclerView)
-
     }
 
     private fun initialApiData() {
