@@ -26,8 +26,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.technorip.kranioz.recyclerapi.Sport
-import com.technorip.kranioz.recyclerapi.login_activity
+import com.technorip.kranioz.recyclerapi.Activities.login_activity
+import com.technorip.kranioz.recyclerapi.Models.Sport
 import java.util.*
 
 /***

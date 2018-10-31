@@ -1,4 +1,4 @@
-package com.technorip.kranioz.recyclerapi
+package com.technorip.kranioz.recyclerapi.Models
 
 object Model {
     data class Result(val query: Query)
@@ -26,3 +26,5 @@ class RedditNewsDataResponse(
     val thumbnail: String,
     val url: String
 )
+
+//kranioz login model

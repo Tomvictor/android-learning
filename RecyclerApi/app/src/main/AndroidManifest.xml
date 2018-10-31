@@ -18,9 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.technorip.kranioz.recyclerapi.DetailActivity">
+        <activity android:name="com.technorip.kranioz.recyclerapi.Activities.DetailActivity">
         </activity>
-        <activity android:name="com.technorip.kranioz.recyclerapi.login_activity">
+        <activity android:name="com.technorip.kranioz.recyclerapi.Activities.login_activity">
         </activity>
     </application>
 

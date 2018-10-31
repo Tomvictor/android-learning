@@ -1,7 +1,8 @@
-package com.technorip.kranioz.recyclerapi
+package com.technorip.kranioz.recyclerapi.Services
 
 
-import com.technorip.kranioz.recyclerapi.Model.Result
+import com.technorip.kranioz.recyclerapi.Models.Model.Result
+import com.technorip.kranioz.recyclerapi.Models.RedditNewsResponse
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

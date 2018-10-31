@@ -5,9 +5,9 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import android.widget.Toast
-import com.technorip.kranioz.recyclerapi.RedditApiService
-import com.technorip.kranioz.recyclerapi.RedditNewsResponse
-import com.technorip.kranioz.recyclerapi.Sport
+import com.technorip.kranioz.recyclerapi.Models.RedditNewsResponse
+import com.technorip.kranioz.recyclerapi.Services.RedditApiService
+import com.technorip.kranioz.recyclerapi.Models.Sport
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -123,7 +123,8 @@ class MainActivity : AppCompatActivity() {
 
         for (i in apiRes.data.children){
             mSportsData!!.add(
-                Sport(i.data.author, i.data.title,i.data.thumbnail
+                Sport(
+                    i.data.author, i.data.title, i.data.thumbnail
                 )
             )
         }

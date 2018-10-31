@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.technorip.kranioz.recyclerapi
+package com.technorip.kranioz.recyclerapi.Models
 
 /**
  * Data model for each row of the RecyclerView
