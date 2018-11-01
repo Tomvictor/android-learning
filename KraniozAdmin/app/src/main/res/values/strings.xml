@@ -1,0 +1,40 @@
+<!--
+  Copyright 2018 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+    <string name="app_name">Kranioz</string>
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">News</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend
+        eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum
+        blandit, dolor diam fringilla tellus, eu euismod mauris neque
+        at neque.
+    </string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="lbl_log_in">Log In</string>
+    <string name="lbl_forgot_password">Forgot password?</string>
+    <string name="lbl_click_here">Click here</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_home">Discover</string>
+    <string name="title_dashboard">Track</string>
+    <string name="title_notifications">Profile</string>
+    <string name="title_activity_discover">Kranioz Tracking</string>
+
+
+</resources>
