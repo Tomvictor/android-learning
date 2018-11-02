@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textColor="@color/status_2"
+                android:textColor="@color/status_4"
                 android:textSize="@dimen/device_notes_size"
                 android:text="@string/nots_place_placeholder"/>
 
@@ -62,23 +62,30 @@
     </RelativeLayout>
 
     <TableLayout
-            android:layout_width="231dp"
-            android:layout_height="44dp" tools:layout_editor_absoluteY="162dp"
+            android:layout_width="317dp"
+            android:layout_height="90dp"
             android:orientation="horizontal" android:gravity="fill_horizontal" android:id="@+id/table"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_marginBottom="256dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            app:layout_constraintVertical_bias="0.0">
 
         <TableRow android:layout_width="124dp"
                   android:layout_height="57dp">
             <TextView
                     android:id="@+id/devstatuslabel"
-                    android:text="Device Status"
+                    android:text="Device Status      "
                     android:textColor="@color/status_2"
+                    android:textSize="@dimen/device_imei_size"
             />
             <TextView
                     android:id="@+id/deviceStatus"
                     android:text="@string/nots_place_placeholder"
+                    android:textSize="@dimen/device_imei_size"
+                    android:textColor="@color/colorPrimary"
 
             />
         </TableRow>
@@ -87,11 +94,14 @@
                   android:layout_height="match_parent">
             <TextView
                     android:id="@+id/trackingmodelabel"
-                    android:text="Tracking mode"
+                    android:text="Tracking mode     "
                     android:textColor="@color/status_2"
+                    android:textSize="@dimen/device_imei_size"
             />
             <TextView
                     android:id="@+id/trackingmode"
+                    android:textSize="@dimen/device_imei_size"
+                    android:textColor="@color/colorPrimary"
             />
         </TableRow>
 
