@@ -1,19 +1,18 @@
 package com.technorip.kranioz.recyclerapi.Services
 
 import com.technorip.kranioz.recyclerapi.Models.KraniozResponse
+import com.technorip.kranioz.recyclerapi.Models.LoginRequest
 import io.reactivex.Observable
-import org.json.JSONObject
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
-import retrofit2.http.Headers
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface  KraniozLoginApiService {
-    @Headers("Content-Type: application/json")
     @POST("login/")
-    fun TryLogin(@Body Payload: JSONObject)
+    fun TryLogin(@Query("format") format: String, @Body Payload: LoginRequest)
             : Observable<KraniozResponse>
 
     companion object {

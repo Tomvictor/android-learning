@@ -1,5 +1,6 @@
 package com.technorip.kranioz.recyclerapi.Activities
 
+import android.app.Activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.EditText
@@ -7,11 +8,12 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.android.materialme.R
 import com.technorip.kranioz.recyclerapi.Models.KraniozResponse
+import com.technorip.kranioz.recyclerapi.Models.LoginRequest
+import com.technorip.kranioz.recyclerapi.Models.User
 import com.technorip.kranioz.recyclerapi.Services.KraniozLoginApiService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import org.json.JSONObject
 
 class login_activity : AppCompatActivity() {
 
@@ -51,17 +53,14 @@ class login_activity : AppCompatActivity() {
 //        toast.show()
 
         //get the api response and populate the data
-        var child_data = JSONObject()
-        var data = JSONObject()
-        child_data.put("email",username)
-        child_data.put("password",password)
-        data.put("user",child_data)
-
-        var test:String
-        test = "{\\n  \\\"user\\\": {\\n    \\\"email\\\": \\\"info@technorip.com\\\",\\n    \\\"password\\\": \\\"asd123##\\\"\\n  }\\n}"
+        var user = User()
+        user.username = username
+        user.passowrd = password
+        var request = LoginRequest()
+        request.user = user
 
 
-        disposable = KraniozLoginApiSer.TryLogin(data)
+        disposable = KraniozLoginApiSer.TryLogin("json", request)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
@@ -71,12 +70,27 @@ class login_activity : AppCompatActivity() {
     }
 
     private fun loginResult(resData: KraniozResponse){
-        val duration = Toast.LENGTH_SHORT
 
-        val toast = Toast.makeText(applicationContext, resData.data.first_name, duration)
-        toast.show()
-        println(resData.data.first_name)
-        println(resData.data.authKey)
+        Toast.makeText(applicationContext, resData.data.organization, Toast.LENGTH_SHORT).show()
+
+        var settings = getSharedPreferences("userDetails", Activity.MODE_PRIVATE)
+
+        // Writing data to SharedPreferences
+        val editor = settings.edit()
+        editor.putString("authKey", resData.data.authKey)
+        editor.apply()
+
+        // Reading from SharedPreferences
+//        val value = settings.getString("authKey", "")
+
+//        Toast.makeText(applicationContext, value, Toast.LENGTH_SHORT).show()
+
+
+
+
+
+
+//        persistenceServices.saveString(GlobalConstants.USER_AUTH_KEY, authKey)
     }
 
 

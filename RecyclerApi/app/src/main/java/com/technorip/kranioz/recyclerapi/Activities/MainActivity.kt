@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import android.widget.Toast
 import com.technorip.kranioz.recyclerapi.Models.RedditNewsResponse
-import com.technorip.kranioz.recyclerapi.Services.RedditApiService
 import com.technorip.kranioz.recyclerapi.Models.Sport
+import com.technorip.kranioz.recyclerapi.Services.RedditApiService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers

@@ -5,6 +5,7 @@ package com.technorip.kranioz.recyclerapi.Models
 class KraniozResponse(val data: KraniozDataResponse)
 
 class KraniozDataResponse(
+    val err: ErrorResponse,
     val my_devices: List<DeviceChildrenResponse>,
     val authKey: String?,
     val userId: String?,
@@ -14,6 +15,11 @@ class KraniozDataResponse(
     val organization_website: String,
     val organization_mobileno: String
 
+)
+
+class ErrorResponse(
+    val message: String,
+    val status: Int
 )
 
 class DeviceChildrenResponse(val data: DeviceDataResponse)
