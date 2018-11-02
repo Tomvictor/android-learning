@@ -9,7 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.technorip.kranioz.kraniozadmin.R
-import com.technorip.kranioz.kraniozadmin.Services.KraniozLoginApiService
+import com.technorip.kranioz.kraniozadmin.Services.KraniozApiService
 import com.technorip.kranioz.recyclerapi.Models.KraniozResponse
 import com.technorip.kranioz.recyclerapi.Models.LoginRequest
 import com.technorip.kranioz.recyclerapi.Models.User
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private var tvMessage: TextView? = null
 
     private val KraniozLoginApiSer by lazy {
-        KraniozLoginApiService.create()
+        KraniozApiService.create()
     }
 
     var disposable: Disposable? = null
@@ -91,10 +91,6 @@ class MainActivity : AppCompatActivity() {
         if(auth=="1"){
 //            open the discover page
             val discoverIntent = Intent(this, DiscoverActivity::class.java)
-            discoverIntent.putExtra(DiscoverActivity.ORGANIZATION,resData.data.organization)
-            discoverIntent.putExtra(DiscoverActivity.ORG_WEBSITE,resData.data.organization_website)
-            discoverIntent.putExtra(DiscoverActivity.ORG_PHONE,resData.data.organization_mobileno)
-            discoverIntent.putExtra(DiscoverActivity.USER_NAME,resData.data.first_name)
             ContextCompat.startActivity(this, discoverIntent, null)
             finish()
         }else{

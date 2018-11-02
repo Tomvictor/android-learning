@@ -11,28 +11,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-
-
-
-
-
         <TextView
-            android:id="@+id/newsTitle"
+                android:id="@+id/devid"
+                android:layout_below="@id/title"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/status_3"
+                android:textSize="@dimen/device_notes_size"
+                android:text="@string/nots_place_placeholder" android:layout_marginTop="-88dp"
+                android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/imei"
             android:textColor="?android:textColorSecondary"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
+            android:textSize="@dimen/device_imei_size"
             android:text="@string/news_placeholder" />
 
         <TextView
-            android:id="@+id/subTitle"
-            android:layout_below="@id/newsTitle"
+            android:id="@+id/title"
+            android:layout_below="@id/imei"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
+            android:textSize="@dimen/device_title_size"
             android:text="@string/sports_info_placeholder" />
+
+        <TextView
+            android:id="@+id/notes"
+            android:layout_below="@id/title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/status_2"
+            android:textSize="@dimen/device_notes_size"
+            android:text="@string/nots_place_placeholder" />
+
 
     </RelativeLayout>
 

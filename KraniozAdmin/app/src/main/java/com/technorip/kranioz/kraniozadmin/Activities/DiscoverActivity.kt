@@ -10,10 +10,10 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import android.widget.Toast
 import com.example.android.materialme.SportsAdapter
+import com.technorip.kranioz.kraniozadmin.Models.Sport
 import com.technorip.kranioz.kraniozadmin.R
-import com.technorip.kranioz.kraniozadmin.Services.KraniozLoginApiService
+import com.technorip.kranioz.kraniozadmin.Services.KraniozApiService
 import com.technorip.kranioz.recyclerapi.Models.KraniozInitialResponse
-import com.technorip.kranioz.recyclerapi.Models.Sport
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -22,19 +22,12 @@ import java.util.*
 
 class DiscoverActivity : AppCompatActivity() {
 
-    companion object {
-        const val ORGANIZATION = ""
-        const val ORG_WEBSITE = ""
-        const val ORG_PHONE = ""
-        const val USER_NAME = ""
-    }
-
     private var mRecyclerView: RecyclerView? = null
     private var mSportsData: ArrayList<Sport>? = null
     private var mAdapter: SportsAdapter? = null
 
     private val KraniozLoginApiSer by lazy {
-        KraniozLoginApiService.create()
+        KraniozApiService.create()
     }
 
     var disposable: Disposable? = null
@@ -165,7 +158,7 @@ class DiscoverActivity : AppCompatActivity() {
         for (i in apiRes.data.my_devices){
             mSportsData!!.add(
                 Sport(
-                    i.title, i.imei
+                    i.title,i.notes,i.imei,i.id
                 )
             )
         }

@@ -10,7 +10,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
 
-interface  KraniozLoginApiService {
+interface  KraniozApiService {
     @POST("login/")
     fun TryLogin(@Query("format") format: String, @Body Payload: LoginRequest)
             : Observable<KraniozResponse>
@@ -25,14 +25,14 @@ interface  KraniozLoginApiService {
             : Observable<KraniozDeviceDetailResponse>
 
     companion object {
-        fun create(): KraniozLoginApiService {
+        fun create(): KraniozApiService {
 
             val retrofit = Retrofit.Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl("http://kranioz.technorip.com/api/")
                 .build()
-            return retrofit.create(KraniozLoginApiService::class.java)
+            return retrofit.create(KraniozApiService::class.java)
         }
     }
 }

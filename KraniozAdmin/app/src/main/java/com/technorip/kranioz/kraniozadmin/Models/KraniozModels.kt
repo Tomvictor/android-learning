@@ -31,7 +31,8 @@ class DeviceDataResponse(
     val title: String,
     val imei: String,
     val notes:String,
-    val mode:String
+    val mode:String,
+    val id:Int
 )
 
 

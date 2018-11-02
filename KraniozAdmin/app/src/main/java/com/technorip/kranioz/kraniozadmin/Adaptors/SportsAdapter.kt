@@ -11,8 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.technorip.kranioz.kraniozadmin.Activities.DetailActivity
+import com.technorip.kranioz.kraniozadmin.Models.Sport
 import com.technorip.kranioz.kraniozadmin.R
-import com.technorip.kranioz.recyclerapi.Models.Sport
 import java.util.*
 
 
@@ -84,12 +84,16 @@ internal class SportsAdapter
         // Member Variables for the TextViews
         private val mTitleText: TextView
         private val mInfoText: TextView
+        private val mimei: TextView
+        private val mdevid: TextView
 //        private val mSportsImage: ImageView
 
         init {
             // Initialize the views.
-            mTitleText = itemView.findViewById(R.id.subTitle)
-            mInfoText = itemView.findViewById(R.id.newsTitle)
+            mTitleText = itemView.findViewById(R.id.title)
+            mInfoText = itemView.findViewById(R.id.notes)
+            mimei = itemView.findViewById(R.id.imei)
+            mdevid = itemView.findViewById(R.id.devid)
 //            msubText = itemView.findViewById(R.id.newsTitle)
 //            mSportsImage = itemView.findViewById(R.id.sportsImage)
 
@@ -101,7 +105,8 @@ internal class SportsAdapter
             // Populate the textviews with data.
             mTitleText.text = currentSport.title
             mInfoText.text = currentSport.info
-
+            mimei.text = currentSport.imei
+            mdevid.text= currentSport.id.toString()
             // Load the images into the ImageView using the Glide library.
 //            Glide.with(mContext).load(
 //                currentSport.imageResource).into(mSportsImage)
@@ -121,7 +126,9 @@ internal class SportsAdapter
 //            mContext.startActivity(detailIntent)
 
             val detailIntent = Intent(mContext, DetailActivity::class.java)
-            detailIntent.putExtra("dev_id",currentitem.title)
+            detailIntent.putExtra("title",currentitem.title)
+            detailIntent.putExtra("info",currentitem.info)
+            detailIntent.putExtra("id",currentitem.id.toString())
             startActivity(mContext,detailIntent,null)
 
         }
