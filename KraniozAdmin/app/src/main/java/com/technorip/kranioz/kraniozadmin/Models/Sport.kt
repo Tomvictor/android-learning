@@ -21,6 +21,7 @@ package com.technorip.kranioz.recyclerapi.Models
  */
 internal class Sport(
         val title: String,
-        val info: String,
-        val imageResource: String
+        val info: String
+//        val imei:String
+//        val imageResource: String
 )

@@ -9,9 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
 import com.technorip.kranioz.kraniozadmin.Activities.DiscoverActivity
 import com.technorip.kranioz.kraniozadmin.R
 import com.technorip.kranioz.recyclerapi.Models.Sport
@@ -86,13 +84,14 @@ internal class SportsAdapter
         // Member Variables for the TextViews
         private val mTitleText: TextView
         private val mInfoText: TextView
-        private val mSportsImage: ImageView
+//        private val mSportsImage: ImageView
 
         init {
             // Initialize the views.
-            mTitleText = itemView.findViewById(R.id.title)
-            mInfoText = itemView.findViewById(R.id.subTitle)
-            mSportsImage = itemView.findViewById(R.id.sportsImage)
+            mTitleText = itemView.findViewById(R.id.subTitle)
+            mInfoText = itemView.findViewById(R.id.newsTitle)
+//            msubText = itemView.findViewById(R.id.newsTitle)
+//            mSportsImage = itemView.findViewById(R.id.sportsImage)
 
             // Set the OnClickListener to the entire view.
             itemView.setOnClickListener(this)
@@ -104,8 +103,8 @@ internal class SportsAdapter
             mInfoText.text = currentSport.info
 
             // Load the images into the ImageView using the Glide library.
-            Glide.with(mContext).load(
-                currentSport.imageResource).into(mSportsImage)
+//            Glide.with(mContext).load(
+//                currentSport.imageResource).into(mSportsImage)
         }
 
         /**

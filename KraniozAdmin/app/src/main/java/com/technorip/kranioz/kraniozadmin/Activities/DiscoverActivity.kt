@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.helper.ItemTouchHelper
 import android.widget.Toast
 import com.example.android.materialme.SportsAdapter
 import com.technorip.kranioz.kraniozadmin.R
@@ -78,6 +79,52 @@ class DiscoverActivity : AppCompatActivity() {
         mAdapter = SportsAdapter(this, mSportsData!!)
         mRecyclerView!!.adapter = mAdapter
 
+        // Helper class for creating swipe to dismiss and drag and drop
+        // functionality.
+        val helper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+            ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT or
+                    ItemTouchHelper.DOWN or ItemTouchHelper.UP,
+            ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
+            /**
+             * Defines the drag and drop functionality.
+             *
+             * @param recyclerView The RecyclerView that contains the list items
+             * @param viewHolder The SportsViewHolder that is being moved
+             * @param target The SportsViewHolder that you are switching the
+             * original one with.
+             * @return true if the item was moved, false otherwise
+             */
+            override fun onMove(recyclerView: RecyclerView,
+                                viewHolder: RecyclerView.ViewHolder,
+                                target: RecyclerView.ViewHolder): Boolean {
+                // Get the from and to positions.
+                val from = viewHolder.adapterPosition
+                val to = target.adapterPosition
+
+                // Swap the items and notify the adapter.
+                Collections.swap(mSportsData!!, from, to)
+                mAdapter!!.notifyItemMoved(from, to)
+                return true
+            }
+
+            /**
+             * Defines the swipe to dismiss functionality.
+             *
+             * @param viewHolder The viewholder being swiped.
+             * @param direction The direction it is swiped in.
+             */
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder,
+                                  direction: Int) {
+                // Remove the item from the dataset.
+                mSportsData!!.removeAt(viewHolder.adapterPosition)
+                // Notify the adapter.
+                mAdapter!!.notifyItemRemoved(viewHolder.adapterPosition)
+            }
+        })
+
+        // Attach the helper to the RecyclerView.
+        helper.attachToRecyclerView(mRecyclerView)
+
     }
 
     private fun loadHomeData(){
@@ -98,13 +145,31 @@ class DiscoverActivity : AppCompatActivity() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { result -> loadRecyclerView(result) },
+                { result -> loadRecyclerData(result) },
                 { error -> Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show() }
             )
     }
 
-    private fun loadRecyclerView(response: KraniozInitialResponse){
-        Toast.makeText(this, response.data.first_name, Toast.LENGTH_SHORT).show()
+
+
+    private fun loadRecyclerData(apiRes: KraniozInitialResponse) {
+        // Clear the existing data (to avoid duplication).
+        mSportsData!!.clear()
+
+        // Create the ArrayList of Sports objects with titles and
+        // information about each sport.
+
+        for (i in apiRes.data.my_devices){
+            mSportsData!!.add(
+                Sport(
+                    i.title, i.imei
+                )
+            )
+        }
+
+
+        // Notify the adapter of the change.
+        mAdapter!!.notifyDataSetChanged()
     }
 
 

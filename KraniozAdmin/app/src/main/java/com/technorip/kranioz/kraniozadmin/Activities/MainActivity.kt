@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity() {
             discoverIntent.putExtra(DiscoverActivity.ORG_PHONE,resData.data.organization_mobileno)
             discoverIntent.putExtra(DiscoverActivity.USER_NAME,resData.data.first_name)
             ContextCompat.startActivity(this, discoverIntent, null)
+            finish()
         }else{
 //            show the error message
             Toast.makeText(applicationContext, resData.err.message.toString(), Toast.LENGTH_SHORT).show()

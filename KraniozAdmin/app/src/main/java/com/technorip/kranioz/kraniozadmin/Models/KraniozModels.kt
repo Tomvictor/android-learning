@@ -8,7 +8,7 @@ class KraniozResponse(
 )
 
 class KraniozDataResponse(
-    val my_devices: List<DeviceChildrenResponse>,
+    val my_devices: List<DeviceDataResponse>,
     val authKey: String?,
     val userId: String?,
     val first_name: String,
@@ -26,11 +26,12 @@ class ErrorResponse(
     val status: Int
 )
 
-class DeviceChildrenResponse(val data: DeviceDataResponse)
 
 class DeviceDataResponse(
     val title: String,
-    val imei: String
+    val imei: String,
+    val notes:String,
+    val mode:String
 )
 
 
