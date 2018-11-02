@@ -79,6 +79,9 @@ class DiscoverActivity : AppCompatActivity() {
         mAdapter = SportsAdapter(this, mSportsData!!)
         mRecyclerView!!.adapter = mAdapter
 
+//        loading apidata to recycler
+        loadHomeData()
+
         // Helper class for creating swipe to dismiss and drag and drop
         // functionality.
         val helper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(

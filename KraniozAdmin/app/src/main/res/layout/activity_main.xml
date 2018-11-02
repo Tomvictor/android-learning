@@ -59,7 +59,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/lbl_log_in"
-                android:textColor="@color/white"/>
+                android:textColor="@color/base_grey"/>
 
         <LinearLayout
                 android:layout_width="wrap_content"

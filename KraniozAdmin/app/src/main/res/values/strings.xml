@@ -35,6 +35,7 @@
     <string name="title_dashboard">Track</string>
     <string name="title_notifications">Profile</string>
     <string name="title_activity_discover">Kranioz Tracking</string>
+    <string name="title_activity_device_detail">Tracker Details</string>
 
 
 </resources>

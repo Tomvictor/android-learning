@@ -41,3 +41,20 @@ class KraniozInitialResponse(
     val err: ErrorResponse,
     val data: KraniozDataResponse
 )
+
+class KraniozDeviceDetailResponse(
+    val err:ErrorResponse,
+    val data:KraniozDeviceDetail
+
+)
+
+class  KraniozDeviceDetail(
+    val id: Int,
+    val title:String,
+    val imei:String,
+    val device_status_title:String,
+    val mobile_no:String,
+    val organization:String,
+    val notes:String,
+    val tracking_mode_title:String
+)

@@ -22,6 +22,10 @@
                 android:name=".Activities.DiscoverActivity"
                 android:label="@string/title_activity_discover">
         </activity>
+
+        <activity android:name=".Activities.DetailActivity"
+                  android:label="@string/title_activity_device_detail">
+        </activity>
     </application>
 
 </manifest>

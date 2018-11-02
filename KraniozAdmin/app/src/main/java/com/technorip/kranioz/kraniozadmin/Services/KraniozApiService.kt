@@ -1,5 +1,6 @@
 package com.technorip.kranioz.kraniozadmin.Services
 
+import com.technorip.kranioz.recyclerapi.Models.KraniozDeviceDetailResponse
 import com.technorip.kranioz.recyclerapi.Models.KraniozInitialResponse
 import com.technorip.kranioz.recyclerapi.Models.KraniozResponse
 import com.technorip.kranioz.recyclerapi.Models.LoginRequest
@@ -18,6 +19,10 @@ interface  KraniozLoginApiService {
     @GET("initial/data/")
     fun InitialData(@Query("format") format: String,@Header("Authorization") authKey:String)
             : Observable<KraniozInitialResponse>
+
+    @GET("detail/")
+    fun DeviceDetail(@Query("format") format: String,@Query("q") q: String,@Header("Authorization") authKey:String)
+            : Observable<KraniozDeviceDetailResponse>
 
     companion object {
         fun create(): KraniozLoginApiService {

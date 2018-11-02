@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.technorip.kranioz.kraniozadmin.Activities.DiscoverActivity
+import com.technorip.kranioz.kraniozadmin.Activities.DetailActivity
 import com.technorip.kranioz.kraniozadmin.R
 import com.technorip.kranioz.recyclerapi.Models.Sport
 import java.util.*
@@ -113,15 +113,16 @@ internal class SportsAdapter
          * @param view View that is clicked.
          */
         override fun onClick(view: View) {
-//            val currentSport = mSportsData[adapterPosition]
+            val currentitem = mSportsData[adapterPosition]
 //            val detailIntent = Intent(mContext, DetailActivity::class.java)
 //            detailIntent.putExtra("title", currentSport.title)
 //            detailIntent.putExtra("image_resource",
 //                currentSport.imageResource)
 //            mContext.startActivity(detailIntent)
 
-            val DiscoverIntent = Intent(mContext, DiscoverActivity::class.java)
-            startActivity(mContext,DiscoverIntent,null)
+            val detailIntent = Intent(mContext, DetailActivity::class.java)
+            detailIntent.putExtra("dev_id",currentitem.title)
+            startActivity(mContext,detailIntent,null)
 
         }
     }
